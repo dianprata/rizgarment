@@ -1,0 +1,45 @@
+/* BREADCRUMB */
+.breadcrumb {
+    border-bottom: 2px solid #000;
+    border-radius: 0;
+}
+
+.breadcrumb h1 {
+    font-weight: bold;
+}
+
+.breadcrumb .divider {
+    margin: 5px;
+    font-size: 14px;
+}
+
+.breadcrumb .current {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.breadcrumb a , .breadcrumb a:focus {
+    color: #111;
+}
+
+.breadcrumb a:hover {
+    color: #555;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+/* END BREADCRUMB */
+
+/* SIZECHART */
+.content-size img {
+    width: 40%;
+    margin-right: 60px;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 767px) {
+    .content-size img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
