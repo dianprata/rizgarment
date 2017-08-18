@@ -13,6 +13,7 @@ let mix = require('laravel-mix');
 
 mix.js('assets/js/app.js', 'assets/javascript/')
    .sass('assets/sass/app.scss', 'assets/css/')
+   .copy('node_modules/bootstrap-sass/assets/fonts/', 'assets/fonts')
 
 // Full API
 // mix.js(src, output);

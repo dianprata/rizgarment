@@ -1,9 +1,9 @@
 //NODE MODULES
 @import "~bootstrap-sass/assets/stylesheets/_bootstrap-sprockets.scss";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/";
 
-
+//FONTS
+@import "fonts";
 //NAVBAR
 @import "navbar";
 //FOOTER

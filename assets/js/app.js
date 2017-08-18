@@ -2,8 +2,9 @@
  * Application
  */
 
-import $ from "jquery"
-import "../../node_modules/bootstrap-sass/assets/javascripts/bootstrap"
+import $ from 'jquery';
+global.jQuery = require('jquery');
+require('./../../node_modules/bootstrap-sass/assets/javascripts/bootstrap');
 
 $(document).tooltip({
     selector: "[data-toggle=tooltip]"
