@@ -10,11 +10,20 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
+var paths = {
+	'bootstrap': './node_modules/bootstrap-sass/assets/'
+}
 
-mix.js('assets/js/app.js', 'assets/javascript/')
-   .sass('assets/sass/app.scss', 'assets/css/')
-   .copy('node_modules/bootstrap-sass/assets/fonts/', 'assets/fonts')
+mix.js('assets/js/app.js', 'assets/javascript/');
+mix.sass('assets/sass/app.scss', 'assets/css/app.css', {
+    includePaths: [
+       paths.bootstrap + 'stylesheets/' /* and my other ones */
+    ]
+ }).options({
+    processCssUrls: false
+ }).copyDirectory( paths.bootstrap + 'fonts/bootstrap/', 'assets/fonts/bootstrap' )
 
+   
 // Full API
 // mix.js(src, output);
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.

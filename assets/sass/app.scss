@@ -2,8 +2,8 @@
 @import "~bootstrap-sass/assets/stylesheets/_bootstrap-sprockets.scss";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/";
 
-//FONTS
-@import "fonts";
+$icon-font-path: '/fonts/bootstrap/';
+
 //NAVBAR
 @import "navbar";
 //FOOTER
