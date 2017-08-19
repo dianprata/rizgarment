@@ -24,34 +24,28 @@ function onStart(){
             <a href="../">HOME</a>
             <span class="divider">></span>
             <a href="/blog" class="current">BLOG</a>
-
-            <div class="breadcrumb custom">
-
-
-                <ul class="movie-list">
+        </div>
+        <div class="breadcrumb custom">
+            <ul class="movie-list">
                     {% for blog in blogs %}
                     <li>
                         {# Use spaceless tag to remove spaces inside the A tag. #}
                         <h3>
-                            <a href="/{{blog.title|replace(' ', '-') }}">
-                    {{ blog.title }}
-                </a>
+                            <a href="/blog/{{blog.title|replace(' ', '-') }}">
+                                {{ blog.title }}
+                            </a>
                         </h3>
-                        <p>Date {{ blog.updated_at|date('D, d M Y - H:i:s', "Etc/GMT-8") }}</p>
-
+                        <h5>{{ blog.updated_at|date('D, d M Y', "Etc/GMT-8") }}</h5>
                         {{ html_limit(blog.body, 150)|raw }}
                     </li>
                     {% else %}
                     <li class="no-data">No Post found</li>
                     {% endfor %}
-                </ul>
+            </ul>
 
-                <div>
-                    
-                    <a href="{{prev}}">Prev</a> - {{ current }}  - <a href="{{ next }}">Next</a> 
-                </div>
-
+            <div>   
+               <a href="{{prev}}">Prev</a> - {{ current }}  - <a href="{{ next }}">Next</a> 
             </div>
         </div>
-
+    </div>
 </section>

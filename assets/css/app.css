@@ -1382,8 +1382,8 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 15px;
   line-height: 1.42857143;
   color: #333333;
   background-color: #fff;
@@ -7723,7 +7723,7 @@ button.close {
 
 @font-face {
   font-family: 'SourceSansProRegular';
-  src: url("~../fonts/bootstrap/SourceSansPro-Regular.ttf") format("truetype");
+  src: url("~../fonts/SourceSansPro-Regular.ttf") format("truetype");
 }
 
 /* NAVBAR */
@@ -8001,13 +8001,14 @@ footer {
 
 /* BREADCRUMB */
 .breadcrumb {
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #7D7D7D;
   border-radius: 0;
   background-color: #fff;
 }
 
 .breadcrumb h1 {
   font-weight: bold;
+  font-size: 27px;
 }
 
 .breadcrumb .divider {
@@ -8046,4 +8047,8 @@ footer {
     margin-right: 0;
     margin-bottom: 10px;
   }
+}
+
+.movie-list {
+  list-style-type: none;
 }
