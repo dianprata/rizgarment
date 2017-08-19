@@ -5,9 +5,10 @@ is_hidden = 0
 ==
 <?php
 use Rizgarment\BlogPost\Models\Blog;
+use Rizgarment\Snilius\Twig;
 
 function onStart(){
-    $this['blogs'] = Db::table('rizgarment_blogpost_')->paginate(3);
+    $this['blogs'] = Db::table('rizgarment_blogpost_')->orderBy('id', 'DESC')->paginate(3);
     $this['next'] = $this['blogs']->nextPageUrl();
     $this['count'] = $this['blogs']->total();
     $this['prev'] = $this['blogs']->previousPageUrl();
@@ -28,7 +29,7 @@ function onStart(){
 
 
                 <ul class="movie-list">
-                    {% for blog in blogs|reverse(true) %}
+                    {% for blog in blogs %}
                     <li>
                         {# Use spaceless tag to remove spaces inside the A tag. #}
                         <h3>
@@ -36,6 +37,7 @@ function onStart(){
                     {{ blog.title }}
                 </a>
                         </h3>
+                        <p>Date {{ blog.updated_at|date('D, d M Y - H:i:s', "Etc/GMT-8") }}</p>
 
                         {{ html_limit(blog.body, 150)|raw }}
                     </li>
