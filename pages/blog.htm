@@ -8,7 +8,7 @@ use Rizgarment\BlogPost\Models\Blog;
 use Rizgarment\Snilius\Twig;
 
 function onStart(){
-    $this['blogs'] = Db::table('rizgarment_blogpost_')->orderBy('id', 'DESC')->paginate(3);
+    $this['blogs'] = Db::table('rizgarment_blogpost_')->orderBy('updated_at', 'DESC')->paginate(3);
     $this['next'] = $this['blogs']->nextPageUrl();
     $this['count'] = $this['blogs']->total();
     $this['prev'] = $this['blogs']->previousPageUrl();

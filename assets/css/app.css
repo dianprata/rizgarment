@@ -7721,6 +7721,11 @@ button.close {
   }
 }
 
+@font-face {
+  font-family: 'SourceSansProRegular';
+  src: url("~../fonts/bootstrap/SourceSansPro-Regular.ttf") format("truetype");
+}
+
 /* NAVBAR */
 .wrapper {
   margin-top: 80px;
